@@ -2,8 +2,8 @@
 // например для 'dsf xxx xxx sd' должно вернуть 'dsf xxx sd'.
 
 const deleteDubl = (string) => {
-    let regexp = /\b(\w+)(\s*\1)+\b/g
-    console.log(string.match(regexp));
+    let regexp = /\b(\w+)(\s+\1)+\b/g
+    // console.log(string.match(regexp));
     return string.replace(regexp, "$1")
 
     //решение нерегуляркой
@@ -17,7 +17,7 @@ const deleteDubl = (string) => {
     //         newArr.push(el)
     //     }
     // }
-    // return newArr.join(', ')
+    // return newArr.join(' ')
 }
 
-console.log(deleteDubl('dsf xxx xxx sd xxx '));
+console.log(deleteDubl('dsf xxx xxx sd'));
